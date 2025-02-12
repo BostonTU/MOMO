@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine PIN Login</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <script>
+        let pin = "201224";
+        let inputPin = "";
+        
+        function enterNumber(num) {
+            if (inputPin.length < 6) {
+                inputPin += num;
+                document.getElementById("pin-display").textContent = "*".repeat(inputPin.length);
+            }
+            if (inputPin.length === 6) {
+                checkPin();
+            }
+        }
+        
+        function checkPin() {
+            if (inputPin === pin) {
+                window.location.href = "second.html"; 
+            } else {
+                alert("รหัสผิด! กรุณาลองใหม่");
+                inputPin = "";
+                document.getElementById("pin-display").textContent = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="image/IMG_1002.jpg" alt="Couple Photo">
+        </div>
+        <div class="form-section">
+            <div id="pin-display" class="pin-display"></div>
+            <div class="keypad">
+                <button onclick="enterNumber('1')">1</button>
+                <button onclick="enterNumber('2')">2</button>
+                <button onclick="enterNumber('3')">3</button>
+                <button onclick="enterNumber('4')">4</button>
+                <button onclick="enterNumber('5')">5</button>
+                <button onclick="enterNumber('6')">6</button>
+                <button onclick="enterNumber('7')">7</button>
+                <button onclick="enterNumber('8')">8</button>
+                <button onclick="enterNumber('9')">9</button>
+                <button>*</button>
+                <button onclick="enterNumber('0')">0</button>
+                <button>#</button>
+            </div>
+            <div class="hint">💡 รหัส: วัน/เดือน/24 </div>
+        </div>
+    </div>
+</body>
+</html>

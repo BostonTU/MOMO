@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffd6e0, #ffebef);
+    font-family: 'Prompt', sans-serif;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    border: 5px solid #ff4d6d;
+    width: 450px;
+}
+
+h1 {
+    color: #d6336c;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.time-box {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff4d6d;
+    background: #ffe4e9;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time-box.small {
+    font-size: 24px;
+    background: #ffd6e0;
+}
+
+.name-box {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #ff4d6d, #d6336c);
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ปุ่ม Next */
+.next-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #ff4d6d, #d6336c);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.next-btn:hover {
+    background: linear-gradient(to bottom, #ff6680, #d6336c);
+    transform: scale(1.05);
+}
+
+.next-btn:active {
+    background: #c72e5c;
+    transform: scale(0.95);
+}
